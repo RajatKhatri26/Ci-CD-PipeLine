@@ -20,7 +20,8 @@ jobs:
               run: npm ci
             - name: run test cases
               run: npm run test  
-    deploy: 
+    deploy:
+        needs: test 
         runs-on: ubuntu-latest
         steps:
             - name: get code
@@ -37,4 +38,4 @@ jobs:
               run: npm run build
             - name: Deploy test
               run: echo "Deploy successfull"
-              
+
