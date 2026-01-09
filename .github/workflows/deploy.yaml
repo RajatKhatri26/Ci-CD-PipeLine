@@ -5,7 +5,7 @@ jobs:
         runs-on: ubuntu-latest
         steps: 
             - name: get code
-              uses: action/checkout@v6
+              uses: actions/checkout@v4
             #   run: |
             #     echo "to clone the repo"
             #     echo "${{tojson(github)}}"
