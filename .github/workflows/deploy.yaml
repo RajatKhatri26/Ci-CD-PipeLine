@@ -14,9 +14,27 @@ jobs:
               uses: actions/setup-node@v6
               with: 
                 node-version: 20
-            - name: to print a verision
-              run: node -v
+            # - name: to print a verision
+            #   run: node -v
             - name:   install dependencies
               run: npm ci
             - name: run test cases
               run: npm run test  
+    deploy: 
+        runs-on: ubuntu-latest
+        steps:
+            - name: get code
+              uses: actions/checkout@v4
+            - name: Install Nodejs
+              uses: actions/setup-node@v6
+              with: 
+                node-version: 20
+            - name:   install dependencies
+              run: npm ci
+            - name: run test cases
+              run: npm run test  
+            - name: build project
+              run: npm run build
+            - name: Deploy test
+              run: echo "Deploy successfull"
+              
