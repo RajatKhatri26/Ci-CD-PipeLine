@@ -1,10 +1,10 @@
-name:   Greeting
+# name:   Greeting
 
-on: push
+# on: push
 
-jobs:
-    greet:
-        runs-on: ubuntu-latest
-        steps:
-            - name: "print message"
-              run: echo "hello this is my cicd pipeline"
+# jobs:
+#     greet:
+#         runs-on: ubuntu-latest
+#         steps:
+#             - name: "print message"
+#               run: echo "hello this is my cicd pipeline"
